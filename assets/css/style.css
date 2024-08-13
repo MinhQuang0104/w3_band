@@ -1,0 +1,230 @@
+/* Reset CSS  */
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box; /* để các div tự tính toán kích thước giữa padding, border và content */
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    position: fixed;
+    /* Đảm bảo trên mọi trình duyệt top luôn bằng 0 (bám dính vào trên cùng)*/
+    top: 0px;
+    /* Đảm bảo trên mọi trình duyệt left luôn bằng 0 (để mép bên
+    trái của position(header) dính sát vào mép bên trái của trình
+    duyệt)*/
+    left: 0px;
+    /* Tương tự ở trên */
+    right: 0px;
+    height: 46.5px;
+    background-color: #000; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    /* Loại bỏ dấu chấm của các thẻ li */
+    list-style-type: none;
+}
+
+#nav > li {
+    /* inline  để các thẻ li  nằm trên 1 dòng, block là giữ lại tính chất
+    khổi để có thể đặt được kích thước */
+    display: inline-block;
+       
+}
+
+#nav li {     
+    position: relative; 
+}
+/* CSS tất cả thẻ a là con của li và li là con của nav */
+
+#nav > li > a {
+    /* Đổi màu chữ */
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {     
+    /* Bỏ gạch chân */
+    text-decoration: none;
+    /* Chỉnh chiều cao bôi chữ BẰNG chiều cao của .header là 46px để CĂN GIỮA */
+    /* Việc chỉnh line hight như này chỉ thay đổi chiều cao của "line box" */
+    line-height: 46.5px;
+    padding: 0px 24px;
+    /* Để thẻ a có tính chất khối cho thuận tiện CSS */
+    display: block;
+}
+
+#nav li:hover .subnav {
+    /* sẽ ghi đè lên display: none; và hiện menu 2 lên */
+    display: block;
+    
+}
+
+/* Khi hover (di chuột và thẻ li là con của #nav thì con của thẻ li (thẻ a) được hover  */
+#nav > li:hover > a,
+#nav  .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    /* Display là thẻ hiển thị. */
+    /* Ẩn đi các thẻ ul có class là subnav và có thẻ cha id là nav */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    min-width: 160px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#nav .subnav a {
+    color: black;
+    /* dùng các con số chia hết cho 4 */
+    padding: 0 16px;
+    line-height: 38px;
+    
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0px 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+    
+}
+
+#slider {
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    /* Cách căn giữa t1 */
+    /* left: 50%;
+    transform: translateX(-50%); */
+
+    /* Cách căn giữa t2 */
+    width: 100%;
+
+    /* Cách căn giữa t3 */
+    /* right: 0;
+    left: 0; */
+    text-align: center;
+}
+
+#slider .text-heading {
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-decription {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content {
+    
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0px;
+    /* Dùng để căn giữa */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    /* Thuộc tính mới */
+    letter-spacing: 4px;
+    
+}
+
+#content .section-sub-heading {
+    text-align: center; 
+    font-size: 15px;
+    margin-top: 25px;
+    /* Thuộc tính mới */
+    font-style: italic;
+    /* Thuộc tính mới, giá trị từ 0-1, độ mờ của chữ */
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    /* Thuộc tính mới, căn đều 2 bên */
+    text-align: justify;
+    /* Độ cao của 1 dòng, với tiếng anh thì 1.4, với tiếng việt dùng 1.6 */
+    line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top: 47px;
+    /* là 1 cách để giải quyết vấn đề khi dùng float cho các thẻ con mà thẻ
+    cha bị rút lại không bọc thẻ con */
+    /* overflow: hidden; */
+}
+
+#content .member-item {
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+
+#footer {
+
+}
