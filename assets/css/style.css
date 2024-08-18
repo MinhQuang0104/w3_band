@@ -17,6 +17,10 @@ html {
     clear: both;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 #header {
     position: fixed;
     /* Đảm bảo trên mọi trình duyệt top luôn bằng 0 (bám dính vào trên cùng)*/
@@ -227,6 +231,43 @@ html {
 .tour-section {
     background-color: #000;
 }
+
+.tour-section {
+    
+}
+
+.content-section {
+    
+}
+
+.section-heading {
+    
+}
+
+.section-sub-heading {
+    
+}
+
+.tickets-list {
+    margin-top: 41px;
+    background-color: #fff;;
+}
+
+.tickets-list > li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd ;
+    color: #757575;
+    list-style-type: none;
+}
+
+.sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 7px;
+    margin-left: 16px;
+}
+
 
 #footer {
 
