@@ -17,6 +17,10 @@ html {
     clear: both;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 #header {
     position: fixed;
     /* Đảm bảo trên mọi trình duyệt top luôn bằng 0 (bám dính vào trên cùng)*/
@@ -164,7 +168,7 @@ html {
 #content {
     
 }
-
+/*  Content-section (Phần chung) */
 #content .content-section {
     width: 800px;
     padding: 64px 0px;
@@ -192,6 +196,7 @@ html {
     opacity: 0.6;
 }
 
+/* About section */
 #content .about-text {
     font-size: 15px;
     margin-top: 25px;
@@ -223,10 +228,54 @@ html {
     width: 154px;
     border-radius: 4px;
 }
+/* About section */
 
+/* Tour section */
 .tour-section {
     background-color: #000;
 }
+
+.tour-section {
+    
+}
+
+.tickets-list {
+    margin-top: 41px;
+    background-color: #fff;;
+}
+
+.tickets-list > li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd ;
+    color: #757575;
+    list-style-type: none;
+}
+
+.sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 7px;
+    margin-left: 16px;
+}
+
+.quantity {
+    background-color: #000;
+    color: #fff;
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* Tour section */
+
+/*  Contact section */
+
+/*  Contact section */
+
 
 #footer {
 
