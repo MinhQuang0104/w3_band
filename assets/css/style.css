@@ -228,7 +228,6 @@ html {
     width: 154px;
     border-radius: 4px;
 }
-/* About section */
 
 /* Tour section */
 .tour-section {
@@ -326,13 +325,30 @@ html {
     background-color: #ccc;
     color: #000;
 }
-/* Tour section */
 
 /*  Contact section */
 
-/*  Contact section */
 
 
 #footer {
 
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0 , 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
 }
